@@ -17,7 +17,7 @@ int main() {
     RealVariable x;
 
     cout << solve(2*x-4 == 10) << endl;  // 7
-    cout << solve(x-20==-20) << "    hi"<< endl;
+    cout << solve((x^2) + 2*x == 16 + 6.0*x-4*x) << "    hi"<< endl;
     
     cout << solve((x^2) == 16) << endl;   // 4 or -4
     try {
