@@ -20,7 +20,6 @@ namespace solver{
             this->b = b;
             this->c = c;
         }
-        //~RealVariable();
 
         friend RealVariable& operator^(RealVariable rv, const int &num);
 
@@ -71,7 +70,6 @@ namespace solver{
             this->b = b;
             this->c = c;
         }
-       // ~ComplexVariable();
 
         friend ComplexVariable& operator^(ComplexVariable cv, const int &num);
 
@@ -88,7 +86,6 @@ namespace solver{
         friend ComplexVariable& operator-(const ComplexVariable cv, const double &num);
         friend ComplexVariable& operator-(const double &num, const ComplexVariable cv);
 
-        //friend ComplexVariable& operator*(ComplexVariable &cv, const ComplexVariable &num);
         friend ComplexVariable& operator*(const ComplexVariable cv, const complex<double> &num);
         friend ComplexVariable& operator*(const complex<double> &num, const ComplexVariable &cnum);
 

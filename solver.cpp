@@ -186,37 +186,16 @@ namespace solver{
             }
 
             else if(num == 1){
-                    *result = cv;
-                    return *result;
-             }
+                *result = cv;
+                return *result;
+            }
             
             else {
                 result->a = cv.a + (cv.b * cv.b);
                 result->b = 0;
                 result->c = cv.c;
 
-                // if (cv.a.real() != 0 || cv.a.imag() != 0) throw ("ERROR: power greater than 2");
-                // else if(cv.b.real() == 0 && cv.b.imag() == 0){
-                    
-                //     result->c.real(cv.c.real()*cv.c.real() - cv.c.imag()*cv.c.imag());
-                //     result->c.imag(2*cv.c.real()*cv.c.imag());
-                //     return *result;
-                // } 
-
-                // else if (cv.c.real() == 0 && cv.c.imag() == 0){
-                //     result->a.real(cv.b.real()*cv.b.real() - cv.b.imag()*cv.b.imag());
-                //     result->a.imag(2*cv.b.real()*cv.b.imag());
-                // }   
-                // else {
-                   
-                //     result->a.real(cv.b.real()*cv.b.real() - cv.b.imag()*cv.b.imag());
-                //     result->a.imag(2*cv.b.real()*cv.b.imag());
-                //     result->b.real(2*cv.b.real()*cv.c.real() - 2*cv.b.imag()*cv.c.imag());
-                //     result->b.imag(2*cv.b.real()*cv.c.imag() + 2*cv.b.imag()*cv.c.real());
-                //     result->c.real(cv.c.real()*cv.c.real() - cv.c.imag()*cv.c.imag());
-                //     result->c.imag(2*cv.c.real()*cv.c.imag());
-                // } 
-                 return *result;
+                return *result;
             }
         }
 
@@ -326,42 +305,6 @@ namespace solver{
             delete result;
         }
 
-        // ComplexVariable& operator*(ComplexVariable &cv, const ComplexVariable &num){
-        //     ComplexVariable *result = new ComplexVariable();
-        //     if (cv.a.real() != 0 || cv.a.imag() != 0){
-        //         if(num.a.real() != 0 || num.a.imag() != 0 || num.b.real() != 0 || num.b.imag() != 0) throw ("ERROR: power greater than 2");
-        //         else {
-        //             *result = cv*num.c;
-        //         }
-        //     }
-        //     else if(num.a.real() != 0 || num.a.imag() != 0){
-        //         if (cv.b.real() != 0 || cv.b.imag() != 0) throw ("ERROR: power greater than 2");
-        //         else{
-        //             *result = cv.c * num;
-        //         }
-        //     }
-        //     else if(cv.b.real() == 0 && cv.b.imag() == 0){
-        //         *result = cv.c * num;
-        //     } 
-        //     else if(num.b.real() == 0 && num.b.imag() == 0){
-        //         *result = num.c * cv;
-        //     } 
-
-        //     else if(cv.c.real() == 0 && cv.c.imag() == 0){
-                
-        //     } 
-        //     else if(num.c.real() == 0 && num.c.imag() == 0){
-
-        //     }
-        //      result->b = cv.b * num.b;
-        //     else{
-        //         result->a = rv.b * num.b;
-        //         result->b = (rv.b * num.c) + (rv.c * num.c);
-        //         result->c = rv.c * num.c; 
-        //     }    
-            
-        //     return *result;
-        // }
 
         
         ComplexVariable& operator*(const ComplexVariable cv, const complex<double> &num){
